@@ -90,31 +90,9 @@ for schema in LAYERS_SCHEMAS:
 
 # clients are declared here in the form
 # name : path/to/distribution
-CLIENTS = {
-    'compose': '/var/sdi-webgis-rw/dist',
-    'view': '/var/sdi-webgis-ro/dist',
-}   
+CLIENTS_PATH = '' 
 
-# it's unfortunate to have it here but we need to setup
-# a default base layer somewhere that can be shared across applications
-DEFAULT_BASE_LAYER = {
-    'name': {
-        'fr': 'urbisFRGray',
-        'nl': 'urbisNLGray',
-    },  
-    'srs': 'EPSG:31370',
-    'params': {
-        'LAYERS': {
-            'fr': 'urbisFRGray',
-            'nl': 'urbisNLGray',
-        },
-        'VERSION': '1.1.1',
-    },
-    'url': {
-        'fr': 'https://geoservices-urbis.irisnet.be/geoserver/ows',
-        'nl': 'https://geoservices-urbis.irisnet.be/geoserver/ows',
-    },
-}
+
 
 # a django setting
 MEDIA_ROOT = '/var/www/sdi/'
